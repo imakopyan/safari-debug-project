@@ -8,7 +8,7 @@
     "react-intl": "^6.4.4",
     "react-scripts": "5.0.1"
   },
-  "homepage": "https://your-username.github.io/safari-debug-project",
+  "homepage": "https://imakopyan.github.io/safari-debug-project",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -34,5 +34,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@formatjs/fast-memoize": "^2.2.7"
   }
 }

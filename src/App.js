@@ -41,7 +41,6 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1>Safari Debug Project</h1>
-          <p>Отладочная информация для тестирования на iPhone</p>
         </header>
 
         <main className="App-main">
@@ -83,47 +82,6 @@ class App extends Component {
             <div className="debug-grid">
               <div><strong>Message ID:</strong> {messageId}</div>
               <div><strong>Fallback Message Safari:</strong> {fallbackMessageSafari}</div>
-            </div>
-          </div>
-
-          <div className="debug-section">
-            <h2>Результат (как в оригинальном коде)</h2>
-            <div className="result-box">
-              <IntlProvider locale={this.state.normalizedLocale} messages={this.state.messages}>
-                <p className="browserWarning">
-                  <FormattedMessage
-                    id={messageId}
-                    description="Warning when someone joins with a browser that isn't supported"
-                    values={{
-                      supportedBrowser1: <a href="https://www.google.com/chrome/">Chrome</a>,
-                      supportedBrowser2: <a href="https://getfirefox.com">Firefox</a>,
-                    }}
-                  />
-                </p>
-              </IntlProvider>
-            </div>
-          </div>
-
-          <div className="debug-section">
-            <h2>Fallback сообщение</h2>
-            <div className="result-box">
-              <p className="browserWarning">
-                {isUnsupportedIos || inUnsupportedSafari ? (
-                  <span>{fallbackMessageSafari}</span>
-                ) : (
-                  <span>
-                    <span>
-                      It looks like you&#39;re using a browser that
-                      is not fully supported. Please use either
-                      {' '}
-                    </span>
-                    <a href="https://www.google.com/chrome/">Chrome</a>
-                    <span> or </span>
-                    <a href="https://getfirefox.com">Firefox</a>
-                    <span> for full support.</span>
-                  </span>
-                )}
-              </p>
             </div>
           </div>
         </main>
